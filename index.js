@@ -21,7 +21,6 @@ const addPushSubscriber = require("./add-push-subscriber.route");
 const sendNewsletter = require("./send-newsletter.route");
 
 const port = 3000;
-const html = __dirname + '/poc-pwa/';
 
 const app = express();
 
@@ -34,11 +33,7 @@ app.route('/api/notifications')
 app.route('/api/newsletter')
     .post(sendNewsletter);
 
-app.use(express.static('poc-pwa/'))
-
-// app.get('/', (req, res) => {
-//     res.sendFile(html + 'index.html');
-// });
+app.use(express.static('poc-pwa/'));
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
