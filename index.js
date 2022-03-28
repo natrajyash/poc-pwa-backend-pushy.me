@@ -33,6 +33,10 @@ app.route('/api/newsletter')
 
 app.use(express.static('poc-pwa/'));
 
+app.get('*', function (req, res) {
+    res.sendFile(__dirname + '/poc-pwa/index.html');
+});
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 });
