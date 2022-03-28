@@ -18,7 +18,7 @@ webpush.setVapidDetails(
 const addPushSubscriber = require("./add-push-subscriber.route");
 const sendNewsletter = require("./send-newsletter.route");
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
