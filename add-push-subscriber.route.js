@@ -8,5 +8,5 @@ module.exports = function addPushSubscriber(req, res) {
 
     USER_SUBSCRIPTIONS.push(sub);
 
-    res.status(200).json({message: "Subscription added successfully."});
+    return res.status(200).json({message: "Subscription added successfully."});
 }
